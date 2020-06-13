@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>Facial Authentication</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+
+.center {
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide ">HOME</a>
+     <!-- Right-sided navbar links -->
+    <div class="w3-right ">
+      <a href="signin.html" class="w3-bar-item w3-button " ><i class="fa fa-user"></i>Authenticate Manually</a>
+      <a href="registration.html" class="w3-bar-item w3-button " ><i class="fa fa-user"></i> REGISTER</a>
+
+  </div>
+</div>
+</div>
+
+
+  <div class="w3-container w3-light-grey " style="padding:150px 16px" id="about">
+
+  	<img class=" center w3-image w3-round-large" src="face.png" alt="FACE" style="width:10%" ><br>
+  	<div class="w3-center">
+  	<a href="#webcam" class="w3-button w3-blue" onclick='openwebcam()' >Verify</a>
+  </div>
+  <div class="video-wrap" id="webcam">
+    <video id="video" playsinline autoplay></video>
+</div>
+<!-- Trigger canvas web API -->
+
+
+<!-- Webcam video snapshot -->
+<canvas id="canvas" width="640" height="480"></canvas>
+
+<script >
+	function openwebcam(){
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const snap = document.getElementById("snap");
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: true,
+  video: {
+    width: 1280, height: 720
+  }
+};
+
+
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+}
+
+
+init();
+
+var context = canvas.getContext('2d');
+snap.addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+}
+
+</script>
+</div>
+</body>
+</html>
