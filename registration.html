@@ -9,7 +9,7 @@
 <style>
 body {font-family: "Raleway", sans-serif}
 
-body, html {
+body, html { 
   height: 100%;
   line-height: 1.8;
 }
@@ -17,37 +17,48 @@ body, html {
 	 display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 35%;
 }
-
+.center1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+#r1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
 .w3-bar .w3-button {
   padding: 16px;
 }
 </style>
 <body>
-<div class="w3-container w3-white" style="padding:128px 16px" id="reg" >
+<div class="w3-container w3-white " style="padding:128px 16px" id="reg" >
   <h3 class="w3-center">REGISTRATION PROCESS</h3>
   <p class="w3-center w3-large">Please register yourself to get started.</p>
   <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Firstname" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Lastname" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Phone number" required name="Phone number"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Designation" required name="Designation"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Address" required name="Address"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter UserID" required name="UserID"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Password" required name="Password"></p>
+      <p id="p1"><input class="w3-input w3-border center" type="text" placeholder="Firstname" required name="Name"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Lastname" required name="Name"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Phone number" required name="Phone number"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Designation" required name="Designation"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Address" required name="Address"></p>
+      <p><input class="w3-input w3-border center center" type="text" placeholder="Enter UserID" required name="UserID"></p>
+      <p><input class="w3-input w3-border center" type="text" placeholder="Password" required name="Password"></p>
       <p class="w3-center w3-large">Capture Photograph </p>
       <div>
-	<button  onclick='openwebcam()'>Use Camera</button>
+	<button  onclick='openwebcam()'class="center1">Use Camera</button>
 
 </div>
-<div class="video-wrap">
+<div class="video-wrap ">
     <video id="video" playsinline autoplay></video>
 </div>
 <!-- Trigger canvas web API -->
-<div class="controller">
-    <button id="snap">Capture</button>
+<div class="controller center">
+    <button id="snap" class="center1">Capture</button>
 </div>
 
 <!-- Webcam video snapshot -->
@@ -96,7 +107,7 @@ snap.addEventListener("click", function() {
 
 </script>
       <p>
-        <button class="w3-button w3-blue" type="submit">
+        <button class="w3-button w3-blue" id="r1" type="submit">
            SUBMIT
         </button>
       </p>
