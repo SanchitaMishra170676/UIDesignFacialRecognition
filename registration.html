@@ -45,15 +45,17 @@ body, html {
   <input  type="submit" value="Upload Image" name="submit">
   <br>
       <br>
-      <p  class="w3-text-grey w3-large">To complete the registration you need to capture a photograph. </p>
+      <p  class="w3-text-grey w3-large">To complete the registration you need to capture your photograph. </p>
       <div>
-	<button onclick='openwebcam()'>Use camera</button>
+        <a href="#video"><button onclick='openwebcam()'>Use camera</button></a>
+
 </div>
 <div class="video-wrap">
-    <video id="video" playsinline autoplay></video>
+    <video id="video" style="width: 100%;" playsinline autoplay ></video>
 </div>
 <div class="controller">
-    <button  id="snap">Capture</button>
+    <a href="#finish" ><button  class="w3-center "id="snap">Capture</button></a>
+
 </div>
 <canvas id="canvas" width="640" height="480"></canvas>
 
@@ -101,7 +103,7 @@ snap.addEventListener("click", function() {
 
 </script>
       <p>
-        <button class="w3-button w3-blue" type="submit">
+        <button id="finish"class="w3-button w3-blue" type="submit">
            SUBMIT
         </button>
       </p>
