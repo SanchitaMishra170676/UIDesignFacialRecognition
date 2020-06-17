@@ -58,7 +58,7 @@ body, html {
     <a href="#finish" ><button  class="w3-center "id="snap">Capture</button></a>
 
 </div  style="width: 100%;" >
-<canvas id="canvas" width="640" height="480"></canvas>
+<canvas id="canvas" width="360" height="480"></canvas>
 
 <script >
 
@@ -98,7 +98,7 @@ init();
 
 var context = canvas.getContext('2d');
 snap.addEventListener("click", function() {
-	context.drawImage(video, 0, 0, 640, 480);
+	context.drawImage(video, 0, 0, 360, 480);
 });
 }
 
