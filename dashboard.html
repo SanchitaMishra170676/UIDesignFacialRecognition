@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <title> Dashboard</title>
+  </head>
+  <body>
+
+        <!-- <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+              <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+
+
+              <div class="collapse navbar-collapse" id="Navbar">
+
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">    <span class="fa fa-home fa-lg"></span> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-edit fa-lg"></span> Update</a></li>
+                </ul>
+
+                <span class="navbar-text" id="btn2">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item "><a class="nav-link" href="#"> <span class="fa fa-sign-out fa-lg"></span>Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-trash fa-lg"></span> Delete Account</a></li>
+                  </ul>
+
+                </span>
+
+             </div>
+              </div>
+        </nav> -->
+
+          <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+                <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><span class="fa fa-info fa-lg"></span> Details</a>
+                <a href="#"><span class="fa fa-edit fa-lg"></span> Update</a>
+                <a href="#"><span class="fa fa-sign-out fa-lg"></span>Logout</a>
+              </div>
+
+
+              <span class="board"  onclick="openNav()"> <span class="fa fa-navicon "></span> &nbsp;  Dashboard </span>
+
+
+            </nav>
+
+         <div class="row cnt1">
+           <ol class="col-12 breadcrumb">
+           <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+           <li class="breadcrumb-item active">Dashboard</li>
+         </ol>
+             <div class="col-12 col-sm-12">
+                <h3 class="dashboard">Welcome!</h3>
+                <hr>
+             </div>
+         </div>
+
+
+         <div class="row row-content" >
+                     <div class="col-12 col-sm-6 ">
+                         <h2> Face Data Accuracy</h2>
+                         <img src="accuracy.PNG" alt="accuracy">
+                    </div>
+                    <div class="col-12 col-sm-6 ">
+                      <h2> User Details</h2>
+                      <div class="align-self-center">
+                        <img src="face.png" alt="face">
+                      </div>
+
+                   </div>
+
+
+
+        </div>
+
+
+        <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/b605b6abff.js"></script>
+
+
+
+  </body>
+</html>
