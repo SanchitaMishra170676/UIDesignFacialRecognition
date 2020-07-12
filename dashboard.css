@@ -12,6 +12,9 @@
   text-align: center;
 
 }
+.pic {
+  width: 50%;
+}
 .board{
   font-family: Sansation;
   font-style: normal;
@@ -46,6 +49,15 @@
   padding-top: 60px;
 }
 
+.line{
+
+  position: relative;
+           /* top: 20px; */
+           height: 6px;
+           background: #B0E0E6;
+             padding-top: 30px;
+
+}
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -56,13 +68,13 @@
 }
 
 .sidenav a:hover {
-  color: ##4682B4;
+  color: #4682B4;
 }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 30px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -70,4 +82,22 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+.sp{
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.cont{
+  padding-top: 100px;
+}
+
+.user{
+  padding-top: 50px;
+}
+
+.hvr{
+  color:#333;
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Logout</title>
+  </head>
+  <body>
+
+<a href="dashboard.html">
+    <button type="button"id="lg" name="button"> Logout</button>
+</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script >
+  $(document).ready(function(){
+    $("button").click(function(){
+      if(confirm('Do you want to logout?')) {
+            return true;
+        }
+
+        return false;
+
+    });
+  });
+</script>
+
+  </body>
+</html>
